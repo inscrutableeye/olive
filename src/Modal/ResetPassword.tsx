@@ -4,27 +4,25 @@ import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth'
 import { BsDot, BsReddit } from 'react-icons/bs'
 
 import { useSetRecoilState } from 'recoil'
-import { authModalState , ModalView } from '../Atom/Authmodalatom'
+
 import { auth } from '../Firebase/ClientApp'
+import { authModalState } from '../Atom/Authmodalatom'
 
-type ResetPasswordProps = {
-  toggleView: (view: ModalView) => void
-}
 
-const ResetPassword: React.FC<ResetPasswordProps> = ({ toggleView }) => {
-  const setAuthModalState = useSetRecoilState(authModalState)
-  const [email, setEmail] = useState('')
-  const [success, setSuccess] = useState(false)
-  const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(
-    auth
-  )
-
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-
-    await sendPasswordResetEmail(email)
-    setSuccess(true)
-  }
+const ResetPassword: React.FC = () => {
+    const setAuthModalState = useSetRecoilState(authModalState)
+    const [email, setEmail] = useState('')
+    const [success, setSuccess] = useState(false)
+    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(
+      auth
+    )
+  
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault()
+  
+      await sendPasswordResetEmail(email)
+      setSuccess(true)
+    }
   return (
     <Flex direction='column' alignItems='center' width='100%'>
       <Text fontWeight={700} mb={2} color="black">
