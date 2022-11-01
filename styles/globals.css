@@ -15,6 +15,21 @@ a {
   box-sizing: border-box;
 }
 
+div.slick_Control .slick-initialized {
+  max-height: 100%;
+  overflow: hidden;
+}
+.slick_dataAnalysis_control .slick-initialized .slick-list {
+  margin: 0 -15px;
+}
+.slick_dataAnalysis_control
+  .slick-initialized
+  .slick-list
+  .slick-track
+  .slick-slide {
+  padding: 0 15px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -23,4 +38,11 @@ a {
     color: white;
     background: black;
   }
+}
+
+.solution_slider .slick-initialized .slick-list {
+  margin: 0 -15px;
+}
+.solution_slider .slick-initialized .slick-list .slick-track .slick-slide {
+  padding: 0 15px;
 }

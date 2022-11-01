@@ -12,6 +12,7 @@ import RightContent from './RightContent/RightContent';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import {auth} from "../../Firebase/ClientApp"
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
+import ShoppingCart from './RightContent/ShoppingCart/ShoppingCart';
 const HeaderLinks : Array<{
   name:string
   link:string
@@ -87,7 +88,8 @@ const Header:React.FC = () => {
             <Stack direction={"row"} spacing="10">
             <Icon as={FaSearch}  style={{width:"30px", height:"30px", color:"black"}} />
             <RightContent user={user}/>
-           <Icon as={FaShoppingCart} style={{width:"30px", height:"30px", color:"black"}} />
+            <ShoppingCart/>
+      
             </Stack>
           
         </Flex>
