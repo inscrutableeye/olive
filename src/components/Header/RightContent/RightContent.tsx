@@ -19,7 +19,7 @@ const RightContent:React.FC<RightContentProps> = ({ user }) => {
     return(
         <>
         <AuthModal />
-        <Flex justify={'center'} align='center'>
+        <Flex justify={'center'} align='center' >
           {user ?  <UserMenu user={user} /> :<AuthButton/> }
      
         </Flex>

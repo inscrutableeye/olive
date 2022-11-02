@@ -93,29 +93,19 @@ import { authDrawerState } from '../../Atom/Authdraweratom';
     const [drawerState, setDrawerState] = useRecoilState(authDrawerState)
     return (
         <>
-    <Box
-        display='flex'
-        flexDirection={'column'}
+      <Flex       
+      flexDirection={'column'}
         justifyContent={{ base: 'center', lg: "space-between" }}
-        ml={{ base: '25px', lg: '0' }}
-     
-      >
-        <link
-          rel='stylesheet'
-          type='text/css'
-          charSet='UTF-8'
-          href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'
-        />
-        <link
-          rel='stylesheet'
-          type='text/css'
-          href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
-        />
+        bg="#fcffde"
+    mt={"-5%"}
+        >
+   
+
         {/* Left Icon */}
 
         <Box ml={"150px"}  transform="translateY(300px)">
         
-            <Text fontSize={"50px"} fontWeight="600" color={"black"}>
+            <Text fontSize={"50px"} fontStyle="normal"  fontWeight="600" color={"black"}>
                 FIRSAT <br></br> ÜRÜNLERİ
             </Text>
         <IconButton
@@ -149,12 +139,14 @@ import { authDrawerState } from '../../Atom/Authdraweratom';
       
         </Box>
         {/* Slider */}
-      </Box>
+  
       <Box
           width={{ xl: "70%", base: "100%" }}
           marginTop={{ base: "30px" }}
         ml="30%"
           p={"12"}
+         
+         
         >
 <Slider {...settings} ref={slider => setSlider(slider)}>
 {data.map((val,index)=> (
@@ -214,6 +206,7 @@ import { authDrawerState } from '../../Atom/Authdraweratom';
 ))}
          </Slider>
          </Box>
+         </Flex>
          </>
     );
   }

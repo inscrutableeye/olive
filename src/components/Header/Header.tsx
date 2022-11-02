@@ -54,9 +54,12 @@ const Header:React.FC = () => {
 
         <Flex direction={"column"}  >
 
-        <Flex direction={"row"}   height={"200px"} align={"center"} justify="space-evenly">
+        <Flex direction={"row"}   height={"200px"} align={"center"} justify="space-between">
            
-<Stack  direction={"row"} spacing="20" >
+
+      
+            <Image  width={"450px"} height="450px"  src='OLIVE OUL3.svg' mt={"20"}/>
+            <Stack  direction={"row"} spacing="20" mr={"100"} >
 {
     HeaderLinks.map((val, index)=> {
         return(
@@ -82,10 +85,7 @@ const Header:React.FC = () => {
     })
 }
 </Stack>
-      
-            <Image  width={"450px"} height="450px" pr={"170"} src='OLIVE OUL3.svg'/>
-           
-            <Stack direction={"row"} spacing="10">
+            <Stack direction={"row"} spacing="10" mr={50}>
             <Icon as={FaSearch}  style={{width:"30px", height:"30px", color:"black"}} />
             <RightContent user={user}/>
             <ShoppingCart/>
