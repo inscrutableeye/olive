@@ -9,14 +9,17 @@ import {
   Heading,
   Text,
   Container,
-  Button,
+
   LinkBox,
   LinkOverlay,
+  Button,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
+import { Navigate , useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 // Settings for the slider
 const settings = {
@@ -29,16 +32,11 @@ const settings = {
 };
 
 export default function CaptionCarousel() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
+
   const [slider, setSlider] = useState<Slider | null>(null)
+  const router = useRouter()
 
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
-
-
-  // This list contains all the data for carousels
-  // This can be static or loaded from a server
+ 
   const cards: Array<{
     image:string
   }> = [
@@ -85,6 +83,16 @@ export default function CaptionCarousel() {
         {cards.map((card, index) => (
           <Box   key={index}>
         <Image src={card.image.toString()}  />
+
+
+        
+        <Button onClick={()=> router.push("/Shop")}   borderRadius={"20px"}  bg="#372a28"  _hover={{
+          bg:"#c7cdc5"
+        }} zIndex={1} mt="-30%" ml={"10%"} padding="10">
+          <Text color={"white"} fontSize="50px" fontStyle={"normal"} fontWeight="700" >
+          Alışverişe Başla
+          </Text>
+          </Button>
         </Box>
         ))}
 

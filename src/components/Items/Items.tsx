@@ -13,10 +13,10 @@ const Items:React.FC<ItemsProps> = () => {
 <LinkOverlay href='/'>
 <Flex alignItems={"center"} direction={"column"} pb="20">
 <Image src='oliveboil.png'/>
-<Text fontSize={"30px"}>
-Zeytinler
+<Text fontSize={"30px"} color="white">
+Zeytin Yağları
 </Text>
-<Text fontSize={"20px"}>
+<Text color="white" fontSize={"20px"}>
 Neque porro quisquam est qui dolorem<br></br> ipsum quia dolor sit amet, consectetur, <br></br> adipisci velit...
 </Text>
 </Flex>
@@ -27,10 +27,10 @@ Neque porro quisquam est qui dolorem<br></br> ipsum quia dolor sit amet, consect
 <LinkOverlay href='/'>
 <Flex alignItems={"center"} direction={"column"} pb="20">
 <Image src='olives.png'/>
-<Text fontSize={"30px"}>
+<Text color="white" fontSize={"30px"}>
 Zeytinler
 </Text>
-<Text fontSize={"20px"}>
+<Text color="white" fontSize={"20px"}>
 Neque porro quisquam est qui dolorem<br></br> ipsum quia dolor sit amet, consectetur, <br></br> adipisci velit...
 </Text>
 
@@ -42,10 +42,10 @@ Neque porro quisquam est qui dolorem<br></br> ipsum quia dolor sit amet, consect
 <LinkOverlay href='/'>
 <Flex alignItems={"center"} direction={"column"} pb="20">
 <Image src='olivesahampoo.png'/>
-<Text fontSize={"30px"}>
-Zeytinler
+<Text color="white" fontSize={"30px"}>
+Kişisel Bakım Ürünleri
 </Text>
-<Text fontSize={"20px"}>
+<Text color="white" fontSize={"20px"}>
 Neque porro quisquam est qui dolorem<br></br> ipsum quia dolor sit amet, consectetur, <br></br> adipisci velit...
 </Text>
 

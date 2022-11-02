@@ -59,7 +59,7 @@ const Header:React.FC = () => {
 
       
             <Image  width={"450px"} height="450px"  src='OLIVE OUL3.svg' mt={"20"}/>
-            <Stack  direction={"row"} spacing="20" mr={"100"} >
+            <Stack  direction={"row"} spacing="20" mr={"270"} >
 {
     HeaderLinks.map((val, index)=> {
         return(
